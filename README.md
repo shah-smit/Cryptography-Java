@@ -7,4 +7,7 @@ convert private Key to PKCS#8 format (so Java can read it)
 - `openssl pkcs8 -topk8 -inform PEM -outform DER -in private.pem -out private_key.der -nocrypt`
 - `openssl rsa -in private.pem -pubout -outform DER -out public_key.der`
 
+Unzip the folder and run the below command:
+- `java -jar rsaopensslkeys.jar`
+
 Ref: https://blog.jonm.dev/posts/rsa-public-key-cryptography-in-java/
