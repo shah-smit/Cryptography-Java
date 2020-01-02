@@ -11,4 +11,12 @@ convert private Key to PKCS#8 format (so Java can read it)
 Unzip the folder and run the below command:
 - `java -jar rsaopensslkeys.jar`
 
+
+	- openssl genrsa -des3 -out private.pem 2048
+	- openssl rsa -in private.pem -outform PEM -pubout -out public.pem
+	- openssl req -key private.pem -new -out domain.csr
+		○ Fill in the details
+
+
+
 Ref: https://blog.jonm.dev/posts/rsa-public-key-cryptography-in-java/
